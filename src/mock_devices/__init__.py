@@ -1,1 +1,1 @@
-
+"""Mock devices for testing."""

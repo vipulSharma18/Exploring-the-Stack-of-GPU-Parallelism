@@ -1,1 +1,1 @@
- 
+"""No parallelism, single GPU."""

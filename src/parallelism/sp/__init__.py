@@ -1,1 +1,1 @@
- 
+"""Model-level Sequence Parallelism."""

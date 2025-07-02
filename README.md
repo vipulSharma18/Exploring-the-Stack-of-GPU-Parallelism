@@ -10,7 +10,7 @@ docker run --gpus all \
     --rm \
     -it \
     --volume /app/.venv \
-    -v "$HOME/.gitconfig":"$HOME/.gitconfig":ro \
-    -v "$HOME/.ssh":"$HOME/.ssh":ro \
+    -v "$HOME/.gitconfig":/root/.gitconfig:ro \
+    -v "$HOME/.ssh":/root/.ssh:ro \
     parallelism:latest
 ```

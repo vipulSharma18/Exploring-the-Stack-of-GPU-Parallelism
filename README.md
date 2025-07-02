@@ -4,6 +4,7 @@ Implements parallelism techniques for model training from first principles using
 Reference for Types of Parallelism:
 1. https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/features/parallelisms.html
 2. https://github.com/xdit-project/xDiT/tree/main?tab=readme-ov-file#parallel
+3. https://github.com/pytorch/torchtitan/tree/main/torchtitan/experiments/simple_fsdp
 
 ## Docker setup:
 ```

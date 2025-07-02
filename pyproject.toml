@@ -8,7 +8,14 @@ version = "0.1.0"
 description = "Parallelism from first principles."
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "torch",
+    "torchvision",
+    "torchaudio",
+    "torchao",
+    "torchtitan",
+    "numpy",
+]
 
 [project.optional-dependencies]
 dev = ["ruff"]

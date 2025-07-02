@@ -1,3 +1,7 @@
+[build-system]
+requires = ["uv_build>=0.7.18,<0.8.0"]
+build-backend = "uv_build"
+
 [project]
 name = "parallelism"
 version = "0.1.0"
@@ -5,3 +9,20 @@ description = "Parallelism from first principles."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
+
+[project.optional-dependencies]
+dev = ["ruff"]
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I"]
+
+[tool.ruff.lint]
+extend-select = ["B", "D", "I"]
+# using bugbear, pydocstyle, and isort
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+quote-style = "double"

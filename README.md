@@ -1,14 +1,16 @@
-# Parallelism_from_first_principles
+# Parallelism From First Principles
 Implements parallelism techniques for model training from first principles using vanilla PyTorch.
 
 
 ## Docker setup:
 ```
-docker run \
+docker build -t parallelism:latest .
+
+docker run --gpus all \
     --rm \
-    --volume .:/app \
+    -it \
     --volume /app/.venv \
-    -v ~/.gitconfig:~/.gitconfig:ro \
-    -v ~/.ssh:~/.ssh:ro \
-    parallelism:latest -it
+    -v "$HOME/.gitconfig":"$HOME/.gitconfig":ro \
+    -v "$HOME/.ssh":"$HOME/.ssh":ro \
+    parallelism:latest
 ```

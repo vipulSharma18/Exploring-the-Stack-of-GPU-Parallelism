@@ -1,4 +1,4 @@
-# Different Abstractions of Parallelism From First Principles
+# The Abstraction Layers of GPU Parallelism
 Implements parallelism techniques for model training from first principles using different levels of abstractions.
 
 It contains the same code implemented in PyTorch DTensors, Distributed RPC, Triton communication kernels, CUDA and NCCL communication kernels, and CUDA + custom NCCL API implementation kernels.

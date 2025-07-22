@@ -1,12 +1,22 @@
 [build-system]
-requires = ["uv_build>=0.7.18,<0.8.0"]
-build-backend = "uv_build"
+requires = ["scikit-build-core>=0.10", "pybind11"]
+build-backend = "scikit_build_core.build"
+
+[tool.uv.build-backend]
+module-name = ["parallelism", "mock_devices"]
+module-root = ""
+
+[tool.uv.workspace]
+members = ["backends/*"]
 
 [project]
 name = "parallelism"
 version = "0.1.0"
 description = "Parallelism from first principles (PFFP)."
 readme = "README.md"
+authors = [
+    { name = "Vipul Sharma", email = "vipuls181999@gmail.com" }
+]
 requires-python = ">=3.12"
 dependencies = [
     "torchtitan",
@@ -14,6 +24,11 @@ dependencies = [
     "numpy",
     "ruff",
     "pydocstyle",
+    "cuda_nccl",
+    "custom_nccl",
+    "torch_dist",
+    "torch_dtensors",
+    "triton_comm",
 ]
 
 [project.optional-dependencies]
@@ -66,6 +81,11 @@ torchao = [
 pytorch-triton = [
   { index = "pytorch-nightly" },
 ]
+cuda_nccl = { workspace = true }
+custom_nccl = { workspace = true }
+torch_dist = { workspace = true }
+torch_dtensors = { workspace = true }
+triton_comm = { workspace = true }
 
 [[tool.uv.index]]
 name = "pytorch-nightly-cpu"

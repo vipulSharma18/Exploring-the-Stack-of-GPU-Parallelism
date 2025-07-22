@@ -1,0 +1,7 @@
+[project]
+name = "triton_comm"
+version = "0.1.0"
+description = "Triton communiation kernels for parallelism"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []

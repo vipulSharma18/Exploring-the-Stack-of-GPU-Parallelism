@@ -1,0 +1,7 @@
+[project]
+name = "torch_dist"
+version = "0.1.0"
+description = "Torch Distributed API based communiation algorithms for parallelism"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []

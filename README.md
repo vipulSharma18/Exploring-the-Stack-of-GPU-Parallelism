@@ -1,5 +1,7 @@
-# Parallelism From First Principles
-Implements parallelism techniques for model training from first principles using vanilla PyTorch.
+# Different Abstractions of Parallelism From First Principles
+Implements parallelism techniques for model training from first principles using different levels of abstractions.
+
+It contains the same code implemented in PyTorch DTensors, Distributed RPC, Triton communication kernels, CUDA and NCCL communication kernels, and CUDA + custom NCCL API implementation kernels.
 
 Reference for Types of Parallelism:
 1. https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/features/parallelisms.html

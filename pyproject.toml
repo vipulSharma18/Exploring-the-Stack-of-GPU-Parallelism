@@ -29,6 +29,8 @@ dependencies = [
     "torch_dist",
     "torch_dtensors",
     "triton_comm",
+    "wandb",
+    "tqdm",
 ]
 
 [project.optional-dependencies]
@@ -104,7 +106,7 @@ explicit = true
 
 # non-uv tools' settings
 [tool.ruff]
-line-length = 88
+line-length = 90
 select = ["E", "F", "I"]
 
 [tool.ruff.lint]

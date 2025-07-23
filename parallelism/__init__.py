@@ -1,1 +1,1 @@
-"""Modular parallelism utilities."""
+"""Modular parallelism"""

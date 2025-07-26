@@ -1,5 +1,5 @@
-"""
-Prepare the Shakespeare dataset for character-level language modeling.
+"""Prepare the Shakespeare dataset for character-level language modeling.
+
 So instead of encoding with GPT-2 BPE tokens, we just map characters to ints.
 Will save train.bin, val.bin containing the ids, and meta.pkl containing the
 encoder and decoder and some other related info.
@@ -8,8 +8,9 @@ Reference: https://github.com/karpathy/nanoGPT/blob/master/data/shakespeare_char
 """
 import os
 import pickle
-import requests
+
 import numpy as np
+import requests
 
 # download the tiny shakespeare dataset
 input_file_path = os.path.join(os.path.dirname(__file__), 'input.txt')
@@ -31,10 +32,10 @@ print(f"vocab size: {vocab_size:,}")
 # create a mapping from characters to integers
 stoi = { ch:i for i,ch in enumerate(chars) }
 itos = { i:ch for i,ch in enumerate(chars) }
-def encode(s):
+def encode(s):  # noqa: D103
     return [stoi[c] for c in s] # encoder: take a string, output a list of integers
-def decode(l):
-    return ''.join([itos[i] for i in l]) # decoder: take a list of integers, output a string
+def decode(l):  # noqa: D103, E741
+    return ''.join([itos[i] for i in l]) # decoder: take list of integers, output string
 
 # create the train and test splits
 n = len(data)

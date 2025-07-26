@@ -1,6 +1,4 @@
-"""
-Reference: https://github.com/karpathy/nanoGPT/blob/master/config/train_shakespeare_char.py
-"""
+"""Reference: https://github.com/karpathy/nanoGPT/blob/master/config/train_shakespeare_char.py."""
 
 # train a miniature character-level shakespeare model
 # good for debugging and playing on macbooks and such

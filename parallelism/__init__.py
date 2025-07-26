@@ -1,1 +1,1 @@
-"""Modular parallelism"""
+"""Modular parallelism."""

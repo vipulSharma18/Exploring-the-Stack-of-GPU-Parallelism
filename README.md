@@ -9,30 +9,30 @@ Reference for Types of Parallelism:
 3. https://github.com/pytorch/torchtitan/tree/main/torchtitan/experiments/simple_fsdp
 
 ## Docker setup:
-For a CPU build:
 ```
-docker build --build-arg TARGET=cpu -t parallelism-cpu:latest .
-
+docker build -t parallelism:latest .
+```
+For running container with CPU:
+```
 docker run \
     --rm \
     -it \
+    -e TARGET=cpu \
     --volume /app/.venv \
     -v "$HOME/.gitconfig":/root/.gitconfig:ro \
     -v "$HOME/.ssh":/root/.ssh:ro \
-    parallelism-cpu:latest
+    parallelism:latest
 ```
-
-For a CUDA 12.8 build:
+For container with CUDA 12.8:
 ```
-docker build --build-arg TARGET=cu128 -t parallelism-cu128:latest .
-
 docker run --gpus all \
     --rm \
     -it \
+    -e TARGET=cu128 \
     --volume /app/.venv \
     -v "$HOME/.gitconfig":/root/.gitconfig:ro \
     -v "$HOME/.ssh":/root/.ssh:ro \
-    parallelism-cu128:latest
+    parallelism:latest
 ```
 
 ## References:

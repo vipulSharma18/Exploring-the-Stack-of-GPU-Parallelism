@@ -13,12 +13,12 @@ ADD https://astral.sh/uv/install.sh /uv-installer.sh
 RUN sh /uv-installer.sh && rm /uv-installer.sh
 ENV PATH="/root/.local/bin/:$PATH"
 
-ARG TARGET=cpu
+# just copy the project and the uv lock file, don't install dependencies
 WORKDIR /app
 COPY . /app
 
-# install dependencies without the project
-RUN --mount=type=cache,target=/root/.cache/uv,id=uv_build_cache \
-    uv sync --extra ${TARGET}
+# Make entrypoint script executable
+RUN chmod +x /app/entrypoint.sh
 
-CMD [ "/bin/bash" ]
+# Use the entrypoint script to install dependencies when a container first starts, making the images smaller
+ENTRYPOINT ["/app/entrypoint.sh"]

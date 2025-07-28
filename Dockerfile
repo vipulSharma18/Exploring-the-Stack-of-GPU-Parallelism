@@ -6,6 +6,7 @@ RUN apt-get update && \
     curl \
     git \
     ssh \
+    software-properties-common \
     && rm -rf /var/lib/apt/lists/*
 
 # install uv

@@ -9,9 +9,16 @@ Reference for Types of Parallelism:
 3. https://github.com/pytorch/torchtitan/tree/main/torchtitan/experiments/simple_fsdp
 
 ## Docker setup:
+Build your own:
 ```
 docker build -t parallelism:latest .
 ```
+
+Pull from my Docker Hub repo:
+```
+docker pull dockervipul181999/parallelism:latest
+```
+
 For running container with CPU:
 ```
 docker run \

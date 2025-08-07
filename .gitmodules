@@ -1,3 +1,3 @@
-[submodule "backends/custom_nccl_collectives"]
-	path = backends/custom_nccl_collectives
-	url = git@github.com:vipulSharma18/Custom-NCCL-Collectives
+[submodule "backends/nccl_from_first_principles"]
+	path = backends/nccl_from_first_principles
+	url = git@github.com:vipulSharma18/NCCL-From-First-Principles

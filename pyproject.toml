@@ -25,7 +25,7 @@ dependencies = [
     "ruff",
     "pydocstyle",
     "cuda_nccl",
-    "custom_nccl_collectives",
+    "nccl_from_first_principles",
     "torch_dist",
     "torch_dtensors",
     "triton_comm",
@@ -84,7 +84,7 @@ pytorch-triton = [
   { index = "pytorch-nightly" },
 ]
 cuda_nccl = { workspace = true }
-custom_nccl_collectives = { workspace = true }
+nccl_from_first_principles = { workspace = true }
 torch_dist = { workspace = true }
 torch_dtensors = { workspace = true }
 triton_comm = { workspace = true }
